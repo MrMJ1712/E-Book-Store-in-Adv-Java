@@ -1,0 +1,17 @@
+registration Form
+
+	Name
+	Email
+	Contact Number
+	Password 
+	Confirm Password
+	
+	
+	Interconnected Pages
+	
+Login Page
+	
+	Email
+	Password
+	
+	
