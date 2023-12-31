@@ -17,6 +17,12 @@ public class Book {
 	private String title;
 	private String author;
 	private double price;
+	private String coverImg;
+	private int stock;
+	private String description;
+	
+//	@OneToMany(mappedBy = "book")
+//	private List<OrderHistory> orderHistory;
 	public int getBookId() {
 		return bookId;
 	}
@@ -73,19 +79,14 @@ public class Book {
 		this.description = description;
 	}
 
-	public List<OrderItem> getOrderItem() {
-		return orderItem;
-	}
+//		public List<OrderHistory> getOrderHistory() {
+//			return orderHistory;
+//		}
+//		public void setOrderHistory(List<OrderHistory> orderHistory) {
+//			this.orderHistory = orderHistory;
+//		}
 
-	public void setOrderItem(List<OrderItem> orderItem) {
-		this.orderItem = orderItem;
-	}
 
-	private String coverImg;
-	private int stock;
-	private String description;
-	
-	@OneToMany(mappedBy = "book")
-	List<OrderItem> orderItem;
+
 
 }

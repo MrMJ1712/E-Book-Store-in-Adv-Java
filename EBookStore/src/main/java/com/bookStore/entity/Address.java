@@ -1,9 +1,12 @@
 package com.bookStore.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Address {
@@ -16,11 +19,21 @@ public class Address {
 	private String area;
 	private String city;
 	private String state;
+	
+	@JsonIgnore
+	@OneToOne(mappedBy="address")
+	private Customer customer;
 	public int getAddressId() {
 		return addressId;
 	}
 	public void setAddressId(int addressId) {
 		this.addressId = addressId;
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 	public int getPincode() {
 		return pincode;

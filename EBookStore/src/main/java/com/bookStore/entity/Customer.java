@@ -25,8 +25,10 @@ public class Customer {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "addressId")
 	private Address address;
-	@OneToMany(mappedBy = "customer")
-	List<Order> order;
+
+	
+	
+
 	public int getCustomerId() {
 		return customerId;
 	}
@@ -63,13 +65,6 @@ public class Customer {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	public List<Order> getOrder() {
-		return order;
-	}
-	public void setOrder(List<Order> order) {
-		this.order = order;
-	}
-	
-	
+
 	
 }
