@@ -1,0 +1,16 @@
+.question{
+    background-color: rgb(144, 249, 249);
+}
+.app3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+     background-color: azure;
+    background-size: cover;
+}
+#butt{
+    width: 100%;
+    text-align: center;
+}
+
